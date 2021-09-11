@@ -14,5 +14,7 @@ define s = Character("Shin'ya")
 
 label start:
     aaa
+    bbb
+    ccc
 
     return
