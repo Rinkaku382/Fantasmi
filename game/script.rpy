@@ -93,6 +93,23 @@ label start:
 
     Or visitors,\njust like him.
     """
+    scene black
+    with midfade
+    show text "Ghost #1\n\nKenny"
+    $ renpy.pause (5)
+    scene 6
+    with midfade
+    """
+    I've been keeping this bar for some years, now.
+
+    And the mornings have always been\nquiet and calm.
+
+    Tender light peeking in\nthrough the windows.
+
+    Soft wind caressing\nthe curtains.
+
+    Few customers,\nall solitary and silent.
+    """
 
     scene black
     with slowfade
