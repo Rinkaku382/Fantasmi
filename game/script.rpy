@@ -98,7 +98,7 @@ label start:
     """
     scene black
     with midfade
-    show text "Ghost #1\n\nKenny"
+    show text "Ghost #1\n\nKenny - Introduction"
     $ renpy.pause (5)
     scene 6
     with midfade
@@ -159,7 +159,7 @@ label kquestions:
 
                 Nice to meet you, Kenny.
                 """
-                k "Yea,\nnice to meet you too."
+                k "Oh...\nn-nice to meet you too."
                 jump kquestions
             "I've never seen you around these parts..." if not where:
                 $ where = True
@@ -182,16 +182,15 @@ label kquestions:
 
 label kconversation:
     menu:
-        "What brings you here?" if not why:
-            $ why = True
+        "What brings you here?":
             k """
             I...
 
             I think you know.
             """
-            a "And what is it\nIshould know?"
+            a "And what is it\nI should know?"
             k """
-            The reson...
+            The reason...
 
             My reason to be here.
 
@@ -200,33 +199,79 @@ label kconversation:
             You're that Miss A., right?
             """
             a """
-            Hmm, maybe...
-            """
-            k "Maybe...?"
-            a """
-            Well, let me ask you this...
+            Yes.
 
-            You have never seen her, right?
+            Miss A. in the flesh.
+
+            Nice to meet you.
+
+            So...
+
+            You wanna talk about your ghost,\nI bet.
             """
-            k "No,\nI only heard stories."
-            a "And what kind of stories?"
             k """
-            That she can see other people's ghosts.
+            Yes...
 
-            Their personal ghosts.
+            I'm having\nvery big troubles with it.
 
-            Like...
+            I think.
+            """
+            a "You think?"
+            k """
+            I'm not entirely sure.
 
-            Fears, unspoken desires, dreams...
+            I feel like something is off.
 
-            Things like that.
+            With me, in general.
+
+            My mood hasn't been the same since...\nlong time.
+
+            A dear friend told me about you.
+
+            And that personal ghosts can influence one's life\npositively or negatively.
             """
             a """
-            And that's why\nyou're here?
+            Yes, that's true.
 
-            To know what\nyour ghost is?
+            And people come here seeking help...
+
+            But please,\ndon't expect solutions.
+
+            I can't solve your problems.
+
+            I can only identify them.
             """
-            k "Y-yes..."
+            k """
+            That's ok.
+
+            All I want is\nto know what's wrong.
+            """
+            a """
+            Ok, let's see, then...
+            """
+            k """
+            Do I...
+
+            Do I have to do\nsomething particular?
+            """
+            a """
+            No.
+
+            Just turn towards me.
+
+            And look into my eyes.
+            """
+            jump kghost
+
+label kghost:
+    scene black
+    with midfade
+    show text "Ghost #1\n\nKenny - Interrogation"
+    $ renpy.pause (5)
+    scene 8
+    with midfade
+    """
+    """
 
 
     scene black
