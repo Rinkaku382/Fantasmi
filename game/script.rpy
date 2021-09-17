@@ -13,6 +13,9 @@ define a = Character("Miss A")
 define s = Character("Shin'ya")
 
 label start:
+    $ who = False
+    $ where = False
+    $ why = False
     scene black
     with midfade
     a """
@@ -66,7 +69,7 @@ label start:
     """
     scene black
     with midfade
-    show text "Dear A.,\n\nA year has already passed since the last time we saw each other,\nand I sure owe you some excuse for not writing you\nuntil now.\nI've spent all this time thinking about your 'ability',\nand about my ghosts.\nOr should I say ours?" with quickfade
+    show text "Dear A.,\n\nHow are you doing?\nIs everything alright there at the bar?\n\nA year has already passed since the last time we saw each other,\nand I sure owe you some excuse for not writing you\nuntil now.\nI've spent all this time thinking about your 'ability',\nand about my ghosts.\nOr should I say ours?" with quickfade
     $ renpy.pause (25)
     scene 2
     with midfade
@@ -81,7 +84,7 @@ label start:
 
     Our ghosts...
 
-    Some months have passed\nsince the last time I saw one.
+    Months have passed\nsince the last time I saw one.
 
     But I remember it very clearly.
 
@@ -89,7 +92,7 @@ label start:
 
     Right when it stopped pouring down,\nsomeone entered in the bar.
 
-    Like all the time I was alone,\nexpecting for clients.
+    I was alone,\nexpecting for clients.
 
     Or visitors,\njust like him.
     """
@@ -102,14 +105,129 @@ label start:
     """
     I've been keeping this bar for some years, now.
 
-    And the mornings have always been\nquiet and calm.
+    And it has always been\nquiet and calm.
 
     Tender light peeking in\nthrough the windows.
 
     Soft wind caressing\nthe curtains.
 
-    Few customers,\nall solitary and silent.
+    Gentle music flowing\nfrom hidden speakers.
+
+    Then, right in the middle\nof that afternoon, he came in.
     """
+    scene 7
+    with slowdissolve
+    """
+    Like many others,\nhe came for me.
+
+    For my ability.
+
+    And I, in a way,\nwas waiting for him...
+
+    Or for someone like him.
+
+    He rapidly looked around...
+
+    And then he took a seat next to me,\ngazing at the floor with nostalgic eyes.
+
+    I think he wanted to say womething,\nbut somehow he couldn't.
+    """
+    a "Hi, welcome to my bar!"
+    k """
+    ...
+
+    Hey.
+    """
+    jump kquestions
+
+label kquestions:
+    if who == True and where == True:
+        jump kconversation
+    else:
+        menu:
+            "What's your name?" if not who:
+                $ who = True
+                k """
+                Kenny.
+
+                That's my name.
+                """
+                a """
+                Sounds like a funny name!
+
+                You can call me Miss A.
+
+                Nice to meet you, Kenny.
+                """
+                k "Yea,\nnice to meet you too."
+                jump kquestions
+            "I've never seen you around these parts..." if not where:
+                $ where = True
+                k """
+                Yeah, I'm...
+
+                I'm not from around here.
+
+                Actually, I live very far.
+
+                Had to took an airplan...
+                """
+                a """
+                Oh really...?
+
+                Well, that seems like\na big effort for real....
+                """
+                k "You can bet on that."
+                jump kquestions
+
+label kconversation:
+    menu:
+        "What brings you here?" if not why:
+            $ why = True
+            k """
+            I...
+
+            I think you know.
+            """
+            a "And what is it\nIshould know?"
+            k """
+            The reson...
+
+            My reason to be here.
+
+            I mean...
+
+            You're that Miss A., right?
+            """
+            a """
+            Hmm, maybe...
+            """
+            k "Maybe...?"
+            a """
+            Well, let me ask you this...
+
+            You have never seen her, right?
+            """
+            k "No,\nI only heard stories."
+            a "And what kind of stories?"
+            k """
+            That she can see other people's ghosts.
+
+            Their personal ghosts.
+
+            Like...
+
+            Fears, unspoken desires, dreams...
+
+            Things like that.
+            """
+            a """
+            And that's why\nyou're here?
+
+            To know what\nyour ghost is?
+            """
+            k "Y-yes..."
+
 
     scene black
     with slowfade
