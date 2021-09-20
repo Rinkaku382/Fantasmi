@@ -7,8 +7,8 @@ define slowdissolve = Dissolve(2.0)
 define middissolve = Dissolve(1.0)
 define fadehold = Fade(3.0, 1.0, 3.0)
 
-#define config.menu_include_disabled = True
-#define config.hard_rollback_limit = 0
+define config.menu_include_disabled = True
+define config.hard_rollback_limit = 0
 
 define a = Character("Miss A")
 define s = Character("Shinya")
@@ -37,7 +37,7 @@ label start:
 
     So that they'll be remembered.
     """
-    scene 9
+    scene 2
     with slowdissolve
     a """
     You can call me Miss A.
@@ -60,7 +60,7 @@ label start:
 
     And when I got back,\na letter was waiting for me.
     """
-    scene 10
+    scene 3
     with slowdissolve
     a """
     The only thing on the envelop was my address.
@@ -98,8 +98,8 @@ label start:
     scene letter1i
     with middissolve
     $ renpy.pause (5)
-    scene 10
-    with midfade
+    scene 3
+    with slowdissolve
     a """
     Shinya...
 
@@ -127,7 +127,7 @@ label start:
     with midfade
     show text "Ghost #1\n\nKenny - Introduction"
     $ renpy.pause (5)
-    scene 9
+    scene 2
     with midfade
     """
     I've been keeping this bar for some years, now.
@@ -142,16 +142,16 @@ label start:
 
     Then, right in the middle\nof that afternoon, he came in.
     """
-    scene 11a
-    with slowdissolve
+    scene 4
+    with midfade
     $ renpy.pause (2)
-    scene 11b
+    scene 5
     with middissolve
     $ renpy.pause (2)
-    scene 11c
+    scene 6
     with middissolve
     $ renpy.pause (2)
-    scene 12
+    scene 7
     with slowdissolve
     """
     Like many others,\nhe came for me.
@@ -290,7 +290,7 @@ label kconversation:
 
             Do I have to do\nsomething particular?
             """
-            scene 13
+            scene 9
             with slowdissolve
             a """
             No.
@@ -299,7 +299,7 @@ label kconversation:
 
             Look into my eyes.
 
-            And tell me about\nyourself
+            And tell me about\nyourself.
             """
             jump kghost
 
@@ -308,7 +308,7 @@ label kghost:
     with midfade
     show text "Ghost #1\n\nKenny - Interrogation"
     $ renpy.pause (5)
-    scene 14
+    scene 8
     with midfade
     k """
     Throughout the years I got accostumed\nto more and more fear...
@@ -335,7 +335,7 @@ label kghost:
 
     In that moment\nI looked around myself...
     """
-    scene 15
+    scene 10
     with slowdissolve
     kg """
     Stop talking!
@@ -345,9 +345,7 @@ label kghost:
     a """
     It took you long enough\nto show up.
 
-    You are...\nan conglomerate of eyes and mouths...?
-
-    It's the first tim\nI see something similar.
+    You are...\na conglomerate...?
     """
     kg """
     It's none\nof your business.
@@ -517,11 +515,11 @@ label kghost:
                             jump kghost2
 
 label kghost2:
-    if kghost_res == -1:
+    if kghost_res == 1:
         """
         After that,\nthe ghost stopped talking.
         """
-        scene 12
+        scene 8
         with slowdissolve
         """
         And Kenny looked\nway more sad than before.
@@ -532,7 +530,7 @@ label kghost2:
 
         And then, he got away.
         """
-        scene 9
+        scene 2
         with midfade
         """
         That wasn't\nmy first failure.
@@ -558,7 +556,7 @@ label kghost2:
         """
         jump enddemo
 
-    if kghost_res == 1:
+    if kghost_res == -1:
         $ write = False
         $ travelling = False
         kg """
@@ -570,7 +568,7 @@ label kghost2:
 
         As you wish.
         """
-        scene 13
+        scene 9
         with middissolve
         a """
         Kenny?
@@ -583,6 +581,8 @@ label kghost2:
         What was I\nsaying...?
         """
         a "You were talking\nabout your fear."
+        scene 8
+        with middissolve
         k """
         Yeah,\nright...
 
@@ -610,9 +610,10 @@ label kghost2:
 
         But I still feel\nall those eyes on me.
         """
+        jump kconversation2
 
 label kconversation2:
-    if write == True and travelling = True:
+    if write == True and travelling == True:
         jump kconversation3
     else:
         menu:
@@ -688,6 +689,8 @@ label kconversation2:
                 jump kconversation2
 
 label kconversation3:
+    scene 7
+    with slowdissolve
     a """
     You know...
 
@@ -791,7 +794,7 @@ label kconversation3:
 
     I think it's the least\nI can do for other people.
     """
-    scene 9
+    scene 2
     with midfade
     """
     I still remember that day with melancholy.
@@ -800,7 +803,7 @@ label kconversation3:
 
     After talking,\nhe took a coffee.
 
-    We drank togethr for a bit...
+    We drank together for a bit...
 
     Talking about our lives.
 
@@ -831,7 +834,7 @@ label kconversation3:
 
     The letter wasn't\nfinished yet...
 
-    And the other two parts\nreminded me other two encounters.
+    And the other two parts\nreminded me of two other encounters.
     """
     jump enddemo
 
