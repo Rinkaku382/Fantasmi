@@ -907,7 +907,7 @@ label enddemo:
     $ renpy.pause (4)
     show text "Colour by\n\nLio" with midfade
     $ renpy.pause (4)
-    show text "Music by by\n\nTatsuhisa Yamamoto" with midfade
+    show text "Music by by\n\nTatsuhisa Yamamoto & Riki Hidaka" with midfade
     $ renpy.pause (4)
     show text "Additional sounds by\n\nRinkaku" with midfade
     $ renpy.pause (4)
