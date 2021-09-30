@@ -1,42 +1,74 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 213, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 498, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 498, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 508, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "renpy/common/00start.rpy", line 274, in script
+    python:
+  File "renpy/common/00start.rpy", line 278, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "renpy/common/00start.rpy", line 310, in script call
+    call expression "before_main_menu"
+  File "game/script.rpy", line 127, in script
+    $ renpy.pause (5)
+  File "renpy/common/00start.rpy", line 310, in script call
+    call expression "before_main_menu"
+  File "game/script.rpy", line 127, in script
+    $ renpy.pause (5)
+  File "game/script.rpy", line 127, in <module>
+    $ renpy.pause (5)
+IOError: Couldn't find file 'chapters.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 213, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 498, in script
-    python hide:
+  File "renpy/common/00start.rpy", line 274, in script
+    python:
   File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 498, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 508, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/loadsave.py", line 769, in load
-    log.unfreeze(roots, label="_after_load")
-  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/python.py", line 2173, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/python.py", line 2005, in rollback
-    self.load_failed()
-  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/python.py", line 1923, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "renpy/common/00start.rpy", line 278, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/game.py", line 344, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/execution.py", line 922, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 310, in script call
+    call expression "before_main_menu"
+  File "game/script.rpy", line 127, in script
+    $ renpy.pause (5)
+  File "renpy/common/00start.rpy", line 310, in script call
+    call expression "before_main_menu"
+  File "game/script.rpy", line 127, in script
+    $ renpy.pause (5)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 127, in <module>
+    $ renpy.pause (5)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/exports.py", line 1561, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/display/core.py", line 3276, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/display/core.py", line 3978, in interact_core
+    renpy.audio.audio.periodic()
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/audio/audio.py", line 1126, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/audio/audio.py", line 1104, in periodic_thread_main
+    periodic_pass()
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/audio/audio.py", line 1046, in periodic_pass
+    c.periodic()
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/audio/audio.py", line 505, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "D:\Games\Programmazione giochi\renpy-7.2.2-sdk/renpy/loader.py", line 798, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'chapters.ogg'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.6.1693
 Fantasmi 
-Mon Sep 20 23:48:22 2021
+Sun Sep 26 18:10:13 2021

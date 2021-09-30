@@ -355,11 +355,12 @@ label before_main_menu:
     stop music fadeout(2)
     scene logo
     with Fade (2.0, 0, 2.0)
-    $ renpy.pause(2)
+    play sound "intro.ogg"
+    $ renpy.pause(5)
     scene menutitle
     with Fade (1.0, 0, 1.0)
     #play music "main_menu.ogg" fadein(3)
-    $ renpy.pause(5)
+    $ renpy.pause(4)
     jump start
 
 label mainm:

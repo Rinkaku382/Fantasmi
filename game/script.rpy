@@ -10,10 +10,10 @@ define fadehold = Fade(3.0, 1.0, 3.0)
 define config.menu_include_disabled = True
 define config.hard_rollback_limit = 0
 
-define a = Character("Miss A")
-define s = Character("Shinya")
-define k = Character("Kenny")
-define kg = Character("Kenny's ghost")
+define a = Character("Miss A", color="#d4ccd7")
+define k = Character("Kenny", color="#c9aad7")
+define kg = Character("Kenny's ghost", color="#b888cf")
+define c = Character("The Conglomerate", color="#b888cf")
 
 label start:
     $ who = False
@@ -22,10 +22,12 @@ label start:
     $ kghost_res = 0
     scene 1
     with slowdissolve
+    $ renpy.pause (3)
+    a "Dear someone..." with dissolve
+    stop sound fadeout (1)
+    play music "prologue2.ogg" fadein(2)
     a """
-    Dear someone...
-
-    I don't actually know\nwhy I'm writing this.
+    I don't actually know\nwho I'm writing to.
 
     Or why I'm doing it.
 
@@ -33,14 +35,11 @@ label start:
 
     To let out the thoughts\nthat come from specific events.
 
-    Or maybe it's to pass on\nthese stories to someone...
+    Or maybe it's to pass\nthese stories on to someone...
 
     So that they'll be remembered.
-    """
-    scene 2
-    with slowdissolve
-    a """
-    You can call me Miss A.
+
+    You can call me Miss A,\nanyway.
 
     My full name\nis not important at all.
 
@@ -54,7 +53,7 @@ label start:
 
     I was taking a walk the other day.
 
-    Losing myself in the vastness\nof nature around my house...
+    While finding myself in the vastness\nof nature around my house...
 
     I lost track of time.
 
@@ -63,16 +62,16 @@ label start:
     scene 3
     with slowdissolve
     a """
-    The only thing on the envelop was my address.
+    The only thing on the envelope was my address.
 
-    I didn't know who the sender was...
+    The sender's name\nwas missing...
 
-    But there was no way\nI could not recognize the writing.
+    But I immediately\nrecognized the writing.
 
     And when I opened it,\na rush of memories hit me.
     """
     scene letter1a
-    with midfade
+    with slowfade
     $ renpy.pause (2)
     scene letter1b
     with middissolve
@@ -103,7 +102,7 @@ label start:
     a """
     Shinya...
 
-    I haven't heard from him for so long,\nand yet I never forgot him.
+    I hadn't heard from him for so long,\nand yet I never forgot him.
 
     As I read those words,\nold feelings peeled through my mind.
 
@@ -111,9 +110,9 @@ label start:
 
     Our ghosts...
 
-    Months have passed\nsince the last time I saw one.
+    Months had passed\nsince the last time I saw one.
 
-    But I remember it very clearly.
+    But I still remember it\nvery clearly.
 
     An Autumn afternoon,\nafter a rainy morning.
 
@@ -123,14 +122,17 @@ label start:
 
     Or visitors,\njust like him.
     """
+    stop music fadeout(4)
     scene black
     with midfade
-    show text "Ghost #1\n\nKenny - Introduction"
+    play sound "chapter.ogg" fadein(0.5)
+    show text "Ghost #1\n\nKenny - Introduction" with quickfade
     $ renpy.pause (5)
     scene 2
     with midfade
+    play music "kenny.ogg"
     """
-    I've been keeping this bar for some years, now.
+    I've been keeping this coffee bar for some years, now.
 
     And it has always been\nquiet and calm.
 
@@ -138,7 +140,7 @@ label start:
 
     Soft wind caressing\nthe curtains.
 
-    Gentle music flowing\nfrom hidden speakers.
+    Atmospheric music flowing\nfrom hidden speakers.
 
     Then, right in the middle\nof that afternoon, he came in.
     """
@@ -166,9 +168,9 @@ label start:
 
     And then he took a seat next to me,\ngazing at the floor with nostalgic eyes.
 
-    I think he wanted to say womething,\nbut somehow he couldn't.
+    I think he wanted to say something,\nbut somehow he couldn't.
     """
-    a "Hi, welcome to my bar!"
+    a "Hi, welcome to my coffee bar!"
     k """
     ...
 
@@ -185,11 +187,9 @@ label kquestions:
                 $ who = True
                 k """
                 Kenny.
-
-                That's my name.
                 """
                 a """
-                Sounds like a funny name!
+                It's a nice one!
 
                 You can call me Miss A.
 
@@ -206,7 +206,7 @@ label kquestions:
 
                 Actually, I live very far.
 
-                Had to took an airplan...
+                Had to took an airplane\nto come here...
                 """
                 a """
                 Oh really...?
@@ -222,7 +222,7 @@ label kconversation:
             k """
             I...
 
-            I think you know.
+            I think you know...
             """
             a "And what is it\nI should know?"
             k """
@@ -239,16 +239,14 @@ label kconversation:
 
             Miss A. in the flesh.
 
-            Nice to meet you.
-
-            So...
-
-            You wanna talk about your ghost,\nI bet.
+            I bet you wanna talk\nabout your ghost,right?
             """
             k """
             Yes...
 
-            I'm having\nvery big troubles with it.
+            I'm having...
+
+            Very big troubles with it.
 
             I think.
             """
@@ -262,14 +260,32 @@ label kconversation:
 
             My mood hasn't been the same since...\nlong time.
 
-            A dear friend told me about you.
+            It's like something\nisn't working properly, in me.
 
-            And that personal ghosts can influence one's life\npositively or negatively.
+            I tried asking for advices,\nand for help, but...
+
+            I got nothing.
+
+            And then, a dear friend\ntold me about you.
+
+            He said that personal ghosts\ncan influence one's life.
+
+            That this is the issue I'm having.
+
+            The source of my feelings.
+
+            So I decided to...try.
+
+            And I came here.
             """
             a """
             Yes, that's true.
 
-            And people come here seeking help...
+            Lots of people\ncome here seeking for help...
+
+            And bring their ghosts with them,\nhoping that I will be able to erase them.
+
+            That I'll make them disappear.
 
             But please,\ndon't expect solutions.
 
@@ -297,7 +313,7 @@ label kconversation:
 
             Just turn towards me.
 
-            Look into my eyes.
+            Look into my eye.
 
             And tell me about\nyourself.
             """
@@ -306,7 +322,8 @@ label kconversation:
 label kghost:
     scene black
     with midfade
-    show text "Ghost #1\n\nKenny - Interrogation"
+    play sound "chapter.ogg"
+    show text "Ghost #1\n\nKenny - Analysis" with quickfade
     $ renpy.pause (5)
     scene 8
     with midfade
@@ -325,7 +342,7 @@ label kghost:
 
     Of my duties as an artist\ntowards my fans.
 
-    I did everything\nfor everyone.
+    I did everything I could\nfor everyone.
 
     And yet nobody\ndid anything for me.
 
@@ -333,21 +350,23 @@ label kghost:
 
     When I started\nfeeling unwell.
 
-    In that moment\nI looked around myself...
+    In that moment,\nI looked around myself...
     """
     scene 10
     with slowdissolve
     kg """
     Stop talking!
 
-    Don't tell her nothing!
+    Don't tell her anything!
     """
     a """
     It took you long enough\nto show up.
 
-    You are...\na conglomerate...?
+    There's so many\nof you in one!
+
+    Are you...\na conglomerate...?
     """
-    kg """
+    c """
     It's none\nof your business.
 
     Leave us alone.
@@ -355,8 +374,8 @@ label kghost:
     We don't need you.
     """
     menu:
-        "I just want to help him":
-            kg """
+        "I just want to help him.":
+            c """
             We don't care.
 
             He's in good company\nwith us.
@@ -366,21 +385,21 @@ label kghost:
             We are the only ones\nwho can help him.
             """
             menu:
-                "Just let me try!":
-                    kg """
+                "Let me try, at least!":
+                    c """
                     We won't.
 
                     Now let us leave\nthis place.
                     """
-    a """
-    They're so stubborn...
+    """
+    They are so stubborn...
 
     Maybe I should be firmer.
     """
     menu:
         "Why is he here, if you are enough?":
-            kg """
-            That's none of your business.
+            c """
+            Once again, that's none\nof your business.
 
             He's weak.
 
@@ -390,7 +409,7 @@ label kghost:
             """
             menu:
                 "You're not doing a good job, then.":
-                    kg """
+                    c """
                     What do you know\nabout us?
 
                     We are strangers.
@@ -403,7 +422,7 @@ label kghost:
                     """
                     "They sound harsher then before..."
                 "Are you so much helpful?":
-                    kg """
+                    c """
                     Yes.
 
                     We are.
@@ -427,21 +446,21 @@ label kghost:
 
                     It does not seem so.
                     """
-                    kg "..."
+                    c "..."
                     jump kghost2
                 "What if I don't?":
                     $ kghost_res = 1
-                    kg """
+                    c """
                     We won't talk anymore,\nthen.
                     """
                     jump kghost2
         "Won't you just give me one opportunity?":
-            kg """
+            c """
             Absolutely not.
 
-            You are just\na useless brat.
+            You only are\na useless brat.
 
-            We are more than enough.
+            We are more\nthan enough for him.
 
             No one ever helped him.
 
@@ -449,7 +468,7 @@ label kghost:
             """
             menu:
                 "Oh, and are you? Really?":
-                    kg """
+                    c """
                     ...
 
                     What are you insinuating?
@@ -467,11 +486,11 @@ label kghost:
 
                             Right?
                             """
-                            kg "..."
+                            c "..."
                             jump kghost2
                         "Aren't you?":
                             $ kghost_res = 1
-                            kg """
+                            c """
                             ...
 
                             We are tired\nof your pathetic nonsense.
@@ -484,19 +503,23 @@ label kghost:
                             """
                             jump kghost2
                 "Maybe I am.":
-                    kg """
-                    Exceptiond don't exist.
+                    c """
+                    Exceptions don't exist.
 
                     Humans are all the same.
 
                     They demand,\nbut don't give.
 
-                    They fake,\nand are never sincere.
+                    They lie,\nand are never sincere.
+
+                    Not even\nwith themselves.
+
+                    Such is\nthe human condition.
                     """
                     menu:
                         "I'm not the unsincere one, here.":
                             $ kghost_res = 1
-                            kg """
+                            c """
                             Your words\ndon't touch us.
 
                             We don't care about what\nyou have to say.
@@ -511,14 +534,17 @@ label kghost:
 
                             Ghosts should be\nbetter than humans, right?
                             """
-                            kg "..."
+                            c "..."
                             jump kghost2
 
 label kghost2:
     if kghost_res == 1:
         """
-        After that,\nthe ghost stopped talking.
+        Then,\nthe ghost stopped talking.
         """
+        play sound "chapter.ogg"
+        show text "Ghost #1\n\nKenny - Conclusion" with quickfade
+        $ renpy.pause (5)
         scene 8
         with slowdissolve
         """
@@ -529,13 +555,21 @@ label kghost2:
         In silence.
 
         And then, he got away.
+
+        As if he was\ncontrolled by something.
+
+        Something stronger...
+
+        That forced him to go away\nand never come back.
         """
         scene 2
         with midfade
         """
-        That wasn't\nmy first failure.
+        That wasn't\nmy first or only failure.
 
-        It often happens to fail\nat talking with a ghost.
+        It happens a lot...
+
+        To fail\nat talking with a ghost.
 
         Personal ghosts can be stubborn.
 
@@ -543,7 +577,7 @@ label kghost2:
 
         Or introvert.
 
-        Sometimes it's dangerous\nto engage with them.
+        Sometimes it's dangerous\nto even engage with them.
         """
         scene 1
         with middissolve
@@ -552,7 +586,7 @@ label kghost2:
 
         But Shinya's letter\nstill continued...
 
-        And the other two parts\nreminded me other two encounters.
+        And the other two parts\nreminded me of two other encounters.
         """
         jump enddemo
 
@@ -560,13 +594,16 @@ label kghost2:
         $ write = False
         $ travelling = False
         kg """
-        Ok, then.
+        ...
 
-        You have won.
+        Ok, then.
 
         We will let him talk.
 
-        As you wish.
+        For this time.
+        """
+        a """
+        Don't worry,\nthere won't be others.
         """
         scene 9
         with middissolve
@@ -602,9 +639,9 @@ label kghost2:
 
         And then I escaped.
 
-        I erased my number.
+        I erased\nmy phone number.
 
-        Fled from my country.
+        Fled from\nmy country.
 
         And came here...\nto understand myself.
 
@@ -617,20 +654,22 @@ label kconversation2:
         jump kconversation3
     else:
         menu:
-            "What made you famous?" if not write:
+            "What is it that made you famous?" if not write:
                 $ write = True
                 k """
                 My...
 
                 My creations.
 
-                All the things I wrote.
+                All the things\nI wrote.
 
-                All the things I thought...
+                All the things\nI thought...
 
-                I was thinking that\nthrowing them outside of me would help.
+                I thought that\nthrowing them outside of me would help.
 
-                I don't know.
+                I wanted to...
+
+                I don't know...
 
                 Maybe to liberate myself.
 
@@ -648,7 +687,7 @@ label kconversation2:
 
                 Expectations arise.
 
-                Times runs shorter.
+                Time runs shorter.
 
                 And you can't help but\nfall victim of all this.
 
@@ -666,13 +705,11 @@ label kconversation2:
 
                 And I have to find all my pieces.
 
-                And I thought...
-
-                Maybe going away will help.
+                And I thought\nthat...
 
                 Putting some distance between\npresent and past can help, sometimes.
 
-                And new places\ncan create new ideas.
+                And new places\ncan give new ideas.
 
                 New images\ncan inspire new feelings.
 
@@ -689,6 +726,11 @@ label kconversation2:
                 jump kconversation2
 
 label kconversation3:
+    scene black
+    with midfade
+    play sound "chapter.ogg"
+    show text "Ghost #1\n\nKenny - Conclusion" with quickfade
+    $ renpy.pause (5)
     scene 7
     with slowdissolve
     a """
@@ -698,34 +740,34 @@ label kconversation3:
 
     And harsh.
 
-    It was more than one.
+    And it was more than one.
 
-    I call that kind an 'conglomerate'.
+    I call that kind 'conglomerate'.
 
-    Which means it is a multitude of ghosts\nthat forms one entity.
+    Which means it is a multitude of ghosts\nthat form one entity.
 
     So, more personal ghosts into one.
 
-    And they wanted to protect you from the outside world.
+    And they wanted to protect you\nfrom the outside world.
 
-    Sometimes ghosts think they act in our defense, but...
+    Sometimes, ghosts think\nthey act in our defense, but...
 
-    They only act as a reflection\nof our self-defense mechanism.
+    They act as a reflection\nof our self-defense mechanism.
 
-    Taking distances from people...
+    Taking distance from people...
 
     Abandoning our past...
 
     Embracing the future...
 
-    All these actions are guided\nby you and your ghost.
+    All these actions may be guided\nby you or your ghost.
 
     So, let me ask you something...
 
     You don't have to answer,\nbut let's try anyway.
     """
     menu:
-        "Will you go on travelling?":
+        "Will you continue travelling?":
             k """
             ...
 
@@ -735,9 +777,9 @@ label kconversation3:
 
             There is peace in travelling.
 
-            And freedom
+            And freedom.
 
-            And when I write,\nit's not for others...
+            And when I'm writing, now,\nit's not for others...
 
             But for myself alone.
 
@@ -750,6 +792,16 @@ label kconversation3:
             Going back,\nsolving everything I left behind...
 
             There are nights in which\nI dream about all that.
+
+            The people\nI abandoned.
+
+            The situations\nI escaped from.
+
+            And I ask\nmyself...
+
+            What's happening there, now?
+
+            Is there someone\nwaiting for me?
 
             But I don't know if I could.
 
@@ -764,7 +816,11 @@ label kconversation3:
 
     Talk with your ghost.
 
-    And encourage you to valuate things\nfrom different perspectives.
+    Pass through its defenses...
+
+    And open your mind.
+
+    Then, encourage you to look at things\nfrom different perspectives.
     """
     k """
     I think that's enough.
@@ -780,15 +836,15 @@ label kconversation3:
     a """
     Oh, you don't have to\nthank me!
 
-    Really,\ndon't worry about it.
+    Don't worry about it.
 
-    It's just my hobby.
+    It's my hobby.
     """
     k "Your hobby?"
     a """
     Yes...
 
-    My job is to keep this bar.
+    My job is to keep this place.
 
     And talking with ghosts\nis just something I do to help others.
 
@@ -799,13 +855,15 @@ label kconversation3:
     """
     I still remember that day with melancholy.
 
-    A slightly happier one\nthan the one in Kenny's eyes.
+    A slightly happier one\nthan Kenny's, though.
 
-    After talking,\nhe took a coffee.
+    Anyway...
 
-    We drank together for a bit...
+    He took a coffee.
 
-    Talking about our lives.
+    We drank together for a bit.
+
+    Talked about our lives.
 
     About his writings.
 
@@ -816,9 +874,9 @@ label kconversation3:
     """
     I remember feeling envious.
 
-    I, too, wanted to go away.
+    I, too, wanted to go far away.
 
-    To discover the world.
+    To discover new things.
 
     But I'm still\ntied to this place.
 
@@ -830,19 +888,31 @@ label kconversation3:
 
     In order to write about it\nand let other people know.
 
+    And I can't help\nbut wonder...
+
     Is this what you are doing now,\nShinya?
 
-    The letter wasn't\nfinished yet...
+    Your letter\nstill continued...
 
-    And the other two parts\nreminded me of two other encounters.
+    And the remaining two parts\nreminded me of two other encounters.
     """
     jump enddemo
 
 
 label enddemo:
+    stop music fadeout(10)
     scene black
     with slowfade
-    show text "Thank you for playing this demo!\nI will release more about Fantasmi/ghosts during the coming months\nso follow me on Twitter at\n@TSoletude\nor\n@Rinkaku382" with quickfade
+    show text "Writing, Promgramming and Art by\n\nRinkaku" with midfade
+    $ renpy.pause (4)
+    show text "Colour by\n\nLio" with midfade
+    $ renpy.pause (4)
+    show text "Music by by\n\nTatsuhisa Yamamoto" with midfade
+    $ renpy.pause (4)
+    show text "Additional sounds by\n\nRinkaku" with midfade
+    $ renpy.pause (4)
+    play sound "chapter.ogg"
+    show text "Thank you for playing this demo!\nI will release more about Fantasmi/ghosts during the coming months\nso follow me on Twitter at\n@TSoletude\nor\n@Rinkaku382"
     $ renpy.pause (7)
     scene black
     with fadehold

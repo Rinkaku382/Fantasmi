@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 139: Menu does not contain any choices.
-    menu:
-         ^
+File "game/script.rpy", line 28: end of line expected.
+    start music "prologue.ogg" fadein(2)
+                               ^
 
-Ren'Py Version: Ren'Py 7.3.5.606
-Wed Sep 15 22:41:08 2021
+Ren'Py Version: Ren'Py 7.4.6.1693
+Thu Sep 30 06:19:52 2021
