@@ -1,0 +1,585 @@
+Fantasmi_Ghosts_Demo
+Back
+History
+Skip
+Auto
+Save
+Q.Save
+Q.Load
+Prefs
+Start
+Load
+Options
+End Replay
+Main Menu
+About Us
+Keys
+About
+A little Visual Novel studio based in Milan, Italy.
+We focus on games and stories about solitude
+and go where our characters lead us.
+
+Rinkaku
+
+
+Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].
+
+[renpy.license!t]
+Save Slots
+{#file_time}%A, %B %d %Y, %H:%M
+empty slot
+Display
+Window
+Rollback Side
+Left
+Right
+Unseen Text
+After Choices
+Transitions
+Text Speed
+Auto-Forward Time
+Music Volume
+Sound Volume
+Test
+Voice Volume
+Mute All
+The dialogue history is empty.
+Help
+Keyboard
+Mouse
+Enter
+Advances dialogue and activates the interface.
+Space
+Advances dialogue without selecting choices.
+Arrow Keys
+Navigate the interface.
+Escape
+Accesses the game menu.
+Ctrl
+Skips dialogue while held down.
+Tab
+Toggles dialogue skipping.
+Page Up
+Rolls back to earlier dialogue.
+Page Down
+Rolls forward to later dialogue.
+Hides the user interface.
+Takes a screenshot.
+Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.
+Left Click
+Middle Click
+Right Click
+Mouse Wheel Up
+Click Rollback Side
+Mouse Wheel Down
+Right Trigger
+A/Bottom Button
+Left Trigger
+Left Shoulder
+Right Shoulder
+D-Pad, Sticks
+Start, Guide
+Y/Top Button
+Yes
+No
+Skipping
+Menu
+Dear someone...
+I don't actually know
+who I'm writing to.
+Or why I'm doing it.
+Maybe it's just a way to liberate
+a feeling I've been having.
+To let out the thoughts
+that come from specific events.
+Or maybe it's to pass
+these stories on to someone...
+So that they'll be remembered.
+You can call me Miss A,
+anyway.
+My full name
+is not important at all.
+It wouldn't add anything to this story.
+Because what I'm going to tell you
+is more about others than about me.
+So...
+I'll start from the beginning.
+I was taking a walk the other day.
+While finding myself in the vastness
+of nature around my house...
+I lost track of time.
+And when I got back,
+a letter was waiting for me.
+The only thing on the envelope was my address.
+The sender's name
+was missing...
+But I immediately
+recognized the writing.
+And when I opened it,
+a rush of memories hit me.
+Shinya...
+I hadn't heard from him for so long,
+and yet I never forgot him.
+As I read those words,
+old feelings peeled through my mind.
+Silently.
+Our ghosts...
+Months had passed
+since the last time I saw one.
+But I still remember it
+very clearly.
+An Autumn afternoon,
+after a rainy morning.
+Right when it stopped pouring down,
+someone entered in the bar.
+I was alone,
+expecting for clients.
+Or visitors,
+just like him.
+I've been keeping this coffee bar for some years, now.
+And it has always been
+quiet and calm.
+Tender light peeking in
+through the windows.
+Soft wind caressing
+the curtains.
+Atmospheric music flowing
+from hidden speakers.
+Then, right in the middle
+of that afternoon, he came in.
+Like many others,
+he came for me.
+For my ability.
+And I, in a way,
+was waiting for him...
+Or for someone like him.
+He rapidly looked around...
+And then he took a seat next to me,
+gazing at the floor with nostalgic eyes.
+I think he wanted to say something,
+but somehow he couldn't.
+Hi, welcome to my coffee bar!
+...
+Hey.
+Kenny.
+It's a nice one!
+You can call me Miss A.
+Nice to meet you, Kenny.
+Oh...
+n-nice to meet you too.
+Yeah, I'm...
+I'm not from around here.
+Actually, I live very far.
+Had to took an airplane
+to come here...
+Oh really...?
+Well, that seems like
+a big effort for real....
+You can bet on that.
+I...
+I think you know...
+And what is it
+I should know?
+The reason...
+My reason to be here.
+I mean...
+You're that Miss A., right?
+Yes.
+Miss A. in the flesh.
+I bet you wanna talk
+about your ghost,right?
+Yes...
+I'm having...
+Very big troubles with it.
+I think.
+You think?
+I'm not entirely sure.
+I feel like something is off.
+With me, in general.
+My mood hasn't been the same since...
+long time.
+It's like something
+isn't working properly, in me.
+I tried asking for advices,
+and for help, but...
+I got nothing.
+And then, a dear friend
+told me about you.
+He said that personal ghosts
+can influence one's life.
+That this is the issue I'm having.
+The source of my feelings.
+So I decided to...try.
+And I came here.
+Yes, that's true.
+Lots of people
+come here seeking for help...
+And bring their ghosts with them,
+hoping that I will be able to erase them.
+That I'll make them disappear.
+But please,
+don't expect solutions.
+I can't solve your problems.
+I can only identify them.
+That's ok.
+All I want is
+to know what's wrong.
+Ok, let's see, then...
+Do I...
+Do I have to do
+something particular?
+No.
+Just turn towards me.
+Look into my eye.
+And tell me about
+yourself.
+Throughout the years I got accostumed
+to more and more fear...
+At each step I took...
+At each eye I met...
+I always felt an uncomfortable feeling.
+As if I was cursed.
+Fully aware of my obligations...
+Of my duties as an artist
+towards my fans.
+I did everything I could
+for everyone.
+And yet nobody
+did anything for me.
+That's when fear appeared.
+When I started
+feeling unwell.
+In that moment,
+I looked around myself...
+Stop talking!
+Don't tell her anything!
+It took you long enough
+to show up.
+There's so many
+of you in one!
+Are you...
+a conglomerate...?
+It's none
+of your business.
+Leave us alone.
+We don't need you.
+We don't care.
+He's in good company
+with us.
+He does not need
+anyone's help.
+We are the only ones
+who can help him.
+We won't.
+Now let us leave
+this place.
+They are so stubborn...
+Maybe I should be firmer.
+Once again, that's none
+of your business.
+He's weak.
+He commits mistakes.
+We are here to solve them.
+What do you know
+about us?
+We are strangers.
+We don't know you.
+You don't know us.
+So your opinion does not matter.
+They sound harsher then before...
+Yes.
+We are.
+Now let us leave,
+please.
+Are they wavering?
+You are all talk
+and no act.
+You stand there,
+with your mighty words.
+While he keeps on suffering.
+And you don't even
+let him talk.
+Are you helping him
+for real?
+It does not seem so.
+...
+We won't talk anymore,
+then.
+Absolutely not.
+You only are
+a useless brat.
+We are more
+than enough for him.
+No one ever helped him.
+And you're not an ecception.
+...
+What are you insinuating?
+Oh absolutely nothing...
+Just that you are
+such a good ghost...
+And I bet
+it's also your fault...
+Right?
+...
+...
+We are tired
+of your pathetic nonsense.
+You think
+you can scare us?
+Make us angry?
+You can't.
+Exceptions don't exist.
+Humans are all the same.
+They demand,
+but don't give.
+They lie,
+and are never sincere.
+Not even
+with themselves.
+Such is
+the human condition.
+Your words
+don't touch us.
+We don't care about what
+you have to say.
+And we will never do.
+Aren't you just as selfish,
+by doing that?
+Ghosts should be
+better than humans, right?
+...
+Then,
+the ghost stopped talking.
+And Kenny looked
+way more sad than before.
+He still stood there
+for a while.
+In silence.
+And then, he got away.
+As if he was
+controlled by something.
+Something stronger...
+That forced him to go away
+and never come back.
+That wasn't
+my first or only failure.
+It happens a lot...
+To fail
+at talking with a ghost.
+Personal ghosts can be stubborn.
+Or aggressive.
+Or introvert.
+Sometimes it's dangerous
+to even engage with them.
+And yet, that day left me
+a sense of defeat.
+But Shinya's letter
+still continued...
+And the other two parts
+reminded me of two other encounters.
+...
+Ok, then.
+We will let him talk.
+For this time.
+Don't worry,
+there won't be others.
+Kenny?
+Are you there?
+Y-yes...
+What was I
+saying...?
+You were talking
+about your fear.
+Yeah,
+right...
+At that time...
+Even though I had people
+all around me...
+I felt lonely.
+No one was really
+interested in me.
+They were much rather
+into my fame.
+They feeded themselves
+off it.
+They feeded off me.
+And then I escaped.
+I erased
+my phone number.
+Fled from
+my country.
+And came here...
+to understand myself.
+But I still feel
+all those eyes on me.
+My...
+My creations.
+All the things
+I wrote.
+All the things
+I thought...
+I thought that
+throwing them outside of me would help.
+I wanted to...
+I don't know...
+Maybe to liberate myself.
+Or to send messages
+to other people.
+But sometimes people
+just want to take.
+And take...
+And take again.
+Then the pressure comes in.
+You can't create anymore.
+Expectations arise.
+Time runs shorter.
+And you can't help but
+fall victim of all this.
+I tried doing my best...
+But I don't know
+if I succeeded.
+I want to find myself
+once again.
+I feel like I've lost...me.
+And I have to find all my pieces.
+And I thought
+that...
+Putting some distance between
+present and past can help, sometimes.
+And new places
+can give new ideas.
+New images
+can inspire new feelings.
+Fame is an obstacle to that.
+An obstacle to the process...
+And also to the result.
+It poisons the creation
+from the moment it starts developing...
+Until the second it is born.
+You know...
+Your ghost was very stubborn.
+And harsh.
+And it was more than one.
+I call that kind 'conglomerate'.
+Which means it is a multitude of ghosts
+that form one entity.
+So, more personal ghosts into one.
+And they wanted to protect you
+from the outside world.
+Sometimes, ghosts think
+they act in our defense, but...
+They act as a reflection
+of our self-defense mechanism.
+Taking distance from people...
+Abandoning our past...
+Embracing the future...
+All these actions may be guided
+by you or your ghost.
+So, let me ask you something...
+You don't have to answer,
+but let's try anyway.
+...
+Maybe.
+I would like to.
+There is peace in travelling.
+And freedom.
+And when I'm writing, now,
+it's not for others...
+But for myself alone.
+Somehow, though...
+I'll have to think about it.
+Sometimes I think I should...
+Going back,
+solving everything I left behind...
+There are nights in which
+I dream about all that.
+The people
+I abandoned.
+The situations
+I escaped from.
+And I ask
+myself...
+What's happening there, now?
+Is there someone
+waiting for me?
+But I don't know if I could.
+Not even if I should.
+Like I said
+at the beginning...
+I can't give you
+any answer.
+I can only ask questions.
+Talk with your ghost.
+Pass through its defenses...
+And open your mind.
+Then, encourage you to look at things
+from different perspectives.
+I think that's enough.
+It really helped.
+And I can truly tell you that...
+Coming here all the way from home
+was worth it.
+So...
+thank you.
+Oh, you don't have to
+thank me!
+Don't worry about it.
+It's my hobby.
+Your hobby?
+Yes...
+My job is to keep this place.
+And talking with ghosts
+is just something I do to help others.
+I think it's the least
+I can do for other people.
+I still remember that day with melancholy.
+A slightly happier one
+than Kenny's, though.
+Anyway...
+He took a coffee.
+We drank together for a bit.
+Talked about our lives.
+About his writings.
+About the travel
+and the sensations that come with it.
+I remember feeling envious.
+I, too, wanted to go far away.
+To discover new things.
+But I'm still
+tied to this place.
+Before going away,
+he said this...
+If he had my power,
+he would have used it to know people better...
+To analyze the world around him.
+In order to write about it
+and let other people know.
+And I can't help
+but wonder...
+Is this what you are doing now,
+Shinya?
+Your letter
+still continued...
+And the remaining two parts
+reminded me of two other encounters.
+What's your name?
+I've never seen you around these parts...
+What brings you here?
+I just want to help him.
+Let me try, at least!
+Why is he here, if you are enough?
+Won't you just give me one opportunity?
+You're not doing a good job, then.
+Are you so much helpful?
+Ghosts like you are just a front.
+What if I don't?
+Oh, and are you? Really?
+Maybe I am.
+So good that he's suffering so much.
+Aren't you?
+I'm not the unsincere one, here.
+Yet you demand attention, but don't give any.
+What is it that made you famous?
+How can travelling help you?
+Will you continue travelling?
+Will you go back?
